@@ -34,7 +34,7 @@ public class SwagLabsTest {
     public static ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-       // options.addArguments("--headless");
+        options.addArguments("--headless");
         options.addArguments("--remote-allow-origins=");
         options.setImplicitWaitTimeout(Duration.ofSeconds(10));
         return options;

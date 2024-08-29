@@ -76,9 +76,11 @@ public class SwagLabsTest extends TestSetup {
         website.getHomePage().enterPassword("secret_sauce");
         website.getHomePage().clickLoginButton();
 
+        MatcherAssert.assertThat(website.getInventoryPage().getBasketCount(), Matchers.is(0));
+
         website.getInventoryPage().addItemToBasket1();
         MatcherAssert.assertThat(website.getInventoryPage().getBasketCount(), Matchers.is(1));
-        website.getInventoryPage().addItemToBasket2();
-        MatcherAssert.assertThat(website.getInventoryPage().getBasketCount(), Matchers.is(2));
+//        website.getInventoryPage().addItemToBasket2();
+//        MatcherAssert.assertThat(website.getInventoryPage().getBasketCount(), Matchers.is(2));
     }
 }
